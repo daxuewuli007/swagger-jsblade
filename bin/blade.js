@@ -39,6 +39,7 @@ app
     .option('-s, --server [portNum]', "启动mock server,端口号,默认8000")
     .option('-c, --config <filePath>', "mock数据配置文件")
     .option('-l, --lite', "不自动识别config文件")
+    .option('-i, --include', "多swagger文件path合并到mock.config.js")
     .action(execute(mock.create));
 
 app.parse(process.argv);
